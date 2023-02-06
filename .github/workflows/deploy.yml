@@ -31,3 +31,5 @@ jobs:
           git add -A
           git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
           git push -f "https://github.com/${GITHUB_REPOSITORY}.git" master:gh-pages
+        env:
+          CI: false
