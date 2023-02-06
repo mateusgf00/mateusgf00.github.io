@@ -1,6 +1,6 @@
 ## Star Wars Front
 
-![PrintScreen do Projeto](https://prnt.sc/YxmBeKopx4yj)
+[PrintScreen do Projeto](https://prnt.sc/YxmBeKopx4yj)
 
 Esse projeto consiste em consumir uma api publica que tem dados sobre star wars https://swapi.dev/api/.
 
