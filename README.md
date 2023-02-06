@@ -22,6 +22,6 @@ Esse comando irá instalar as dependências necessárias para poder rodar o proj
 
 ### `npm start`
 
-Para rodar em modo desenvolvimento,
+Para rodar em modo desenvolvimento.
 
 Abra [http://localhost:3000](http://localhost:3000) para ver no seu navegador.
