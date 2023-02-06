@@ -115,7 +115,7 @@ export default function TablePeople() {
       {
         !loading && (
           <div className="div-pagination">
-            <button className="btn btn-warning btn-previous" disabled={!previousPage} onClick={() => { loadPeople(nextPage) }}>Previous</button>
+            <button className="btn btn-warning btn-previous" disabled={!previousPage} onClick={() => { loadPeople(previousPage) }}>Previous</button>
             <button className="btn btn-warning" disabled={!nextPage} onClick={() => { loadPeople(nextPage) }}>Next</button>
           </div>
         )
