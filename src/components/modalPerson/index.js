@@ -4,7 +4,7 @@ import Loading from "../Loading";
 import TableFilms from "../tableFilms";
 import "./style.css";
 
-export default function(props) {
+export default function ModalPerson(props) {
   const [films, setFilms] = useState();
   const [loading, setLoading] = useState(false);
 

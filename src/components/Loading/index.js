@@ -1,11 +1,11 @@
-import { LoadingContainer } from "./styles";
+import "./styles.css"
 
-export default function() {
+export default function Loading() {
   return (
-    <LoadingContainer>
+    <div className="div-container">
       <div class="spinner-border" role="status">
         <span class="sr-only"></span>
       </div>
-    </LoadingContainer>
+    </div>
   )
 }
