@@ -1,0 +1,10 @@
+span{
+  font-weight: bold
+}
+
+.modal-header{
+  background-color: #ffc107;
+  border-bottom-width: 0.5px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}

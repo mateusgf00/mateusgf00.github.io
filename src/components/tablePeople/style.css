@@ -1,0 +1,32 @@
+.table-people{
+  border-radius: 8px;
+  width: 100%;
+  background-color: white;
+  margin: 0px;
+}
+
+.div-table-people{
+  margin-top: 10px;
+  min-width: 60%;
+}
+
+.div-container{
+  display: flex;
+  justify-content: center;
+}
+
+.container-input-search{
+  float: right;
+  margin-bottom: 10px;
+  min-width: 40%;
+}
+
+.div-pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.btn-previous{
+  margin-right: 5px;
+}
