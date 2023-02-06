@@ -1,5 +1,5 @@
-import Header from "../../components/header";
-import TablePeople from "../../components/tablePeople";
+import Header from "../../components/Header";
+import TablePeople from "../../components/TablePeople";
 
 export default function Home() {
   return (

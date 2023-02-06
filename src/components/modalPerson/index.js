@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import StarWarsService from "../../service/StarWars";
-import TableFilms from "../tableFilms";
+import Loading from "../Loading";
+import TableFilms from "../TableFilms";
 import "./style.css";
 
-export function ModalPerson(props) {
+export default function(props) {
   const [films, setFilms] = useState();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     if (props.person?.films) {
       StarWarsService.getFilms(props.person?.films)
       .then(data => {
@@ -14,7 +17,8 @@ export function ModalPerson(props) {
       })
       .catch(error => {
         console.error(error);
-      });
+      })
+      .finally(() => setLoading(false));
     }
   }, [props])
 
@@ -37,7 +41,14 @@ export function ModalPerson(props) {
             <p><span>Eye Color: </span>{props.person?.eye_color}</p>
             <hr />
             <h4 className="modal-title fs-3">Movies</h4>
-            { films && <TableFilms props={films} />}
+
+            {
+              loading ? (
+                <Loading />
+              ) : (
+                <TableFilms props={films} />
+              )
+            }
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={clearFilms}>Close</button>

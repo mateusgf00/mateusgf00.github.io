@@ -1,0 +1,33 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16.6'
+      - name: setup git auth
+        env:
+          email: 'mateusgf00@gmail.com'
+          username: 'mateusgf00'
+          access_token1: 'ghp_OKGoJPqvU65xK0vM'
+          access_token2: 'mc5ioACTMhGB4R30GRhA'
+        run: |
+          git config --global credential.helper store
+          echo "https://${access_token1}${access_token2}:x-oauth-basic@github.com" > ~/.git-credentials
+          git config --global user.email mateusgf00@gmail.com
+          git config --global user.name mateusgf00
+      - name: deploy to gh-pages
+        run: |
+          npm i
+          NODE_ENV=production npm run build
+          cd build
+          git init
+          git add -A
+          git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
+          git push -f "https://github.com/${GITHUB_REPOSITORY}.git" master:gh-pages
