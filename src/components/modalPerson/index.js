@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import StarWarsService from "../../service/StarWars";
 import Loading from "../Loading";
-import TableFilms from "../TableFilms";
+import TableFilms from "../tableFilms";
 import "./style.css";
 
 export default function(props) {

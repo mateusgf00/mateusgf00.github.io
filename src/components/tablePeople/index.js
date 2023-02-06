@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import StarWarsService from "../../service/StarWars"
-import ModalPerson from "../ModalPerson";
+import ModalPerson from "../modalPerson";
 import Loading from '../Loading';
 import "./style.css";
 
