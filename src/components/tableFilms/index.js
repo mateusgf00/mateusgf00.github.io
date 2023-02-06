@@ -3,7 +3,7 @@ import { format } from 'date-fns'
 export default function TableFilms({props}){
   return(
     <>
-    <table class="table table-striped">
+    <table className="table table-striped">
       <thead>
         <tr>
           <th style={{width: '70%'}}>Title</th>

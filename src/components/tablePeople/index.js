@@ -49,15 +49,15 @@ export default function TablePeople() {
 
   return (
     <>
-      <div class="div-container">
-        <div class="div-table-people" >
-          <div class="container-input-search">
-            <div class="d-flex" role="search">
-              <input class="form-control me-2" onBlur={()=>{reloadIfNull()}} onChange={(event)=>{setSearchInput(event.target.value)}} type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-warning" onClick={()=> {searchPeople()}}>Search</button>
+      <div className="div-container">
+        <div className="div-table-people" >
+          <div className="container-input-search">
+            <div className="d-flex" role="search">
+              <input className="form-control me-2" onBlur={()=>{reloadIfNull()}} onChange={(event)=>{setSearchInput(event.target.value)}} type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-warning" onClick={()=> {searchPeople()}}>Search</button>
             </div>
           </div>
-          <table class="table-people table table-striped">
+          <table className="table-people table table-striped">
             <thead>
               <tr>
                 <th style={{ width: '60%' }}>Name</th>
@@ -71,7 +71,7 @@ export default function TablePeople() {
                   <td>{obj.name}</td>
                   <td>{obj.gender}</td>
                   <td>
-                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalPersoDetail" onClick={() => { visualizarDetalhe(obj) }}>
+                    <button type="button" className="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalPersoDetail" onClick={() => { visualizarDetalhe(obj) }}>
                       Details
                     </button>
                   </td>
@@ -82,9 +82,9 @@ export default function TablePeople() {
         </div>
         <ModalPerson person={person} />
       </div>
-      <div class="div-pagination">
-            <button class="btn btn-warning btn-previous" disabled={!previousPage} onClick={() => { Pagination(previousPage) }}>Previous</button>
-            <button class="btn btn-warning" disabled={!nextPage} onClick={() => { Pagination(nextPage) }}>Next</button>
+      <div className="div-pagination">
+            <button className="btn btn-warning btn-previous" disabled={!previousPage} onClick={() => { Pagination(previousPage) }}>Previous</button>
+            <button className="btn btn-warning" disabled={!nextPage} onClick={() => { Pagination(nextPage) }}>Next</button>
       </div>
     </>
   );
