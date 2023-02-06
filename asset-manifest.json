@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/star-wars-front/static/css/main.7ebcbdfd.css",
+    "main.js": "/star-wars-front/static/js/main.ea6439f5.js",
+    "index.html": "/star-wars-front/index.html",
+    "main.7ebcbdfd.css.map": "/star-wars-front/static/css/main.7ebcbdfd.css.map",
+    "main.ea6439f5.js.map": "/star-wars-front/static/js/main.ea6439f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ebcbdfd.css",
+    "static/js/main.ea6439f5.js"
+  ]
+}
